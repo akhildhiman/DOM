@@ -2,6 +2,15 @@ var quotes;
 
 // Write your code here
 
+    function randomQuoteGenerator() {
+        var randomNumber =  Math.floor(Math.random() * (quotes.length));
+        document.querySelector(".quote_section").innerHTML = quotes[randomNumber].quoteText;
+        document.querySelector(".blockquote_section").innerHTML = quotes[randomNumber].quoteAuthor;
+    }
+
+    let buttonTag = document.querySelector(".btn");
+    buttonTag.addEventListener("click", randomQuoteGenerator);
+    
 
 
 quotes = [

@@ -13,4 +13,34 @@
       <li>Hometown: <span id="hometown"></span></li>
     </ul>
   </body>
+
+
+
+  <script>
+    document.body.style.fontFamily = "Arial, sans-serif";
+
+    document.getElementById("nickname").innerText = "Jimmy";
+    document.getElementById("favorites").innerText = "Lasagna";
+    document.getElementById("hometown").innerText = "Mexico";
+
+    document.querySelectorAll("li").forEach(function(item){
+      item.className = "listitem";
+    })
+
+    let image = document.createElement("img");
+    image.setAttribute("src", "https://www.google.com/search?tbm=isch&q=Robert+De+Niro+Jr.#imgrc=cYvSs-U3gVLGXM:");
+
+    let googleLogo = document.getElementById("hplogo");
+    googleLogo.src = "https://casscommunity3.files.wordpress.com/2017/06/yahoo-logo.png";
+
+    let googleSearchButton = document.getElementsByClassName("gNO89b");
+    googleSearchButton.textContent = "Yahoo!";  
+
+    document.querySelector(".gNO89b").nextElementSibling.innerText = "I'm lucky";
+
+
+
+
+
+  </script>
 </html>

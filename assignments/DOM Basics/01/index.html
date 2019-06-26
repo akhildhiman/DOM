@@ -9,8 +9,35 @@
   <body>
     <body>
       <h1>Document Object Model</h1>
+      <ul>
+        <li>Buy groceries</li>
+        <li>Feed the cat</li>
+        <li>Do laundry</li>
+      </ul>
     <script>
       // your code goes here
+
+      const paragraph = document.createElement('p');
+      paragraph.textContent = "Hello JavaScript!";
+      paragraph.innerHTML = "I love <strong>JavaScript</strong>";
+
+
+      const list = document.querySelector("ul");
+      const newList = document.createElement("li");
+      newList.textContent = "Do exercise";
+      list.appendChild(newList);
+      
+
+
+
+
+
+
+
+
+
+
+     
     </script>
   </body>
 </html>

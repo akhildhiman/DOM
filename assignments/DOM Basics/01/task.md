@@ -8,7 +8,7 @@ Use the below instruction and solve it using `index.html` file. Write JavaScript
     <ul>
       <li>Buy groceries</li>
       <li>Feed the cat</li>
-      <li>Do laundry</li>
+      <li>Do laundry</li> 
     </ul>
   ```
 5. Create a new `li` element and push it in the `ul` using `appendChild`.
