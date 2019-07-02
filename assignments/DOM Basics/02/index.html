@@ -47,10 +47,25 @@
     <div class="demo-query-all">Access me by query all (2)</div>
     <script>
       // your code goes here
-    let demo1 = document.getElementById("demo").style.border = "1px solid purple";
-    let demo2 = document.getElementsByClassName("demo").style.border = "1px solid orange";
-    let demo3 = document.getElementsByClassName("article").style.border = "1px solid blue";
-    let demo4 = document.getElementsById("demo-query").style.border = "1px solid blue";
+      document.getElementById("demo").style.border = "1px solid purple";//1
+
+      const demoClass = document.getElementsByClassName("demo");//2
+      for(i = 0; i < demoClass.length; i++) {
+        demoClass[i].style.border = "1px solid orange";
+      }     
+
+      const articleTag = document.getElementsByTagName("article");//3
+      for(i = 0; i < articleTag.length; i++) {
+        articleTag[i].style.border = "1px solid grey";
+      }
+
+      document.getElementById("demo-query").style.border = "1px solid grey";//4
+
+      const demoAll = document.querySelectorAll(".demo-query-all");//5
+      demoAll.forEach(demoItemAll => {
+        demoItemAll.style.border = "1px solid red";
+      });
+
     </script>
   </body>
 </html>
