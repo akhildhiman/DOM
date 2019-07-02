@@ -8,36 +8,31 @@
   </head>
   <body>
     <body>
-      <h1>Document Object Model</h1>
-      <ul>
-        <li>Buy groceries</li>
-        <li>Feed the cat</li>
-        <li>Do laundry</li>
-      </ul>
-    <script>
-      // your code goes here
 
-      const paragraph = document.createElement('p');
-      paragraph.textContent = "Hello JavaScript!";
-      paragraph.innerHTML = "I love <strong>JavaScript</strong>";
+      <script>
+        let paraTag = document.createElement("p"); //1
+        paraTag.textContent = "Hello JavaScript!"; //2
+        paraTag.innerHTML = "I love <strong>JavaScript</strong>";//3
 
+        let list = document.createElement("ul");//4
+        let newList = document.createElement("li"); 
+        newList.innerHTML = "Buy Groceries";
+        list.appendChild(newList);
+        let newList2 = document.createElement("li");
+        newList2.innerHTML = "Feed the cat";
+        list.appendChild(newList2);
+        let newList3 = document.createElement("li");
+        newList3.innerHTML = "Do Laundry";
+        list.appendChild(newList3);
 
-      const list = document.querySelector("ul");
-      const newList = document.createElement("li");
-      newList.textContent = "Do exercise";
-      list.appendChild(newList);
-      
+        document.body.appendChild(list);
 
+        let newList4 = document.createElement("li");//5
+        newList4.innerHTML = "Solve Katas"
+        list.appendChild(newList4);
 
+        list.removeChild(list.firstElementChild);//6
 
-
-
-
-
-
-
-
-     
-    </script>
+      </script>
   </body>
 </html>
