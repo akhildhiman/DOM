@@ -13,30 +13,41 @@
       <li>Hometown: <span id="hometown"></span></li>
     </ul>
   </body>
-
-
-
+  
   <script>
-    document.body.style.fontFamily = "Arial, sans-serif";
+    document.body.style.fontFamily = "Arial, sans-serif";//2
 
-    document.getElementById("nickname").innerText = "Jimmy";
-    document.getElementById("favorites").innerText = "Lasagna";
-    document.getElementById("hometown").innerText = "Mexico";
+    document.getElementById("nickname").innerText = "Bob";//3
+    document.getElementById("favorites").innerText = "RicknMorty";
+    document.getElementById("hometown").innerText = "Nowhere";
 
-    document.querySelectorAll("li").forEach(function(item){
-      item.className = "listitem";
-    })
+    const list = document.querySelectorAll("li");//4
+    list.forEach(listItem => {
+      listItem.classList.add("listitem");
+    });
 
-    let image = document.createElement("img");
-    image.setAttribute("src", "https://www.google.com/search?tbm=isch&q=Robert+De+Niro+Jr.#imgrc=cYvSs-U3gVLGXM:");
+    let image = document.createElement("img");//5
+    image.src = "https://www.breakingbelizenews.com/wp-content/uploads/2019/02/bob-marley-720x728.jpg";
+    document.body.appendChild(image);
 
-    let googleLogo = document.getElementById("hplogo");
-    googleLogo.src = "https://casscommunity3.files.wordpress.com/2017/06/yahoo-logo.png";
+    // Second Part
 
-    let googleSearchButton = document.getElementsByClassName("gNO89b");
-    googleSearchButton.textContent = "Yahoo!";  
+    let logo = "/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png";//2
+    logo.src = "https://casscommunity3.files.wordpress.com/2017/06/yahoo-logo.png";//3
+    let searchBtn = document.querySelector(".gNO89b");//4
+    searchBtn.innerText = "Yahoo!";//5
+    let btn2 = document.querySelector(".gNO89b").nextElementSibling;//6
+    btn2.innerText = "I'm Lucky!";
 
-    document.querySelector(".gNO89b").nextElementSibling.innerText = "I'm lucky";
+
+
+
+
+
+
+
+
+
 
 
 
