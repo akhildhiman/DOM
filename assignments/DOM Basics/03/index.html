@@ -40,24 +40,36 @@
     const ul = document.getElementsByTagName("ul")[0];
     // Your code goes here
 
-    ul.firstElementChild.style.background = "red";
+    document.querySelector("ul").firstElementChild.style.background = "green";//1
 
-    document.querySelectorAll("li").forEach(function(item){
-      return item.style.background = "yellow";
-    })
+    const list = document.querySelectorAll("li");//2
+    list.forEach(listItem => {
+      listItem.style.background = "red";
+    });
 
-    ul.children[2].style.color = "pink";
+    document.querySelector("ul").lastElementChild.style.color = "pink";//3
+    document.querySelector("ul").children[2];//4
 
-    let Item1 = ul.children[1];
-    item1.nextElementSibling.style.background = "coral";
-    item1.previousElementSibling.style.background = "aquamarine";
-
-
-
-
-
-
-
+    document.querySelector("ul").firstElementChild.style.color = "coral";//5
+    document.querySelector("ul").lastElementChild.style.color = "aquamarine";
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
   </script>
 </html>
