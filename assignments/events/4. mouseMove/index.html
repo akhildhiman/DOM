@@ -8,12 +8,42 @@
 </head>
 <body>
     <h1>Move Mouse Cursor</h1>
-    <h2></h2>
-    <h3></h3>
-    <h4></h4>
-    <h5></h5>
+    <h2 class="header1">881</h2>
+    <h3 class="header2">343</h3>
+    <h4 class="header3">467</h4>
+    <h5 class="header4">164</h5>
+
+   
+
     <script>
-        document.addEventListener("mousemove", (e) => console.log(e.screenX, e.screenY, e.clientX, e.clientY));
+
+        function changeText1(e) {
+            header1.innerText = e.screenX;
+        }
+        function changeText2(e) {
+            header2.innerText = e.screenY;
+        }
+        function changeText3(e) {
+            header3.innerText = e.clientX;
+        }
+        function changeText4(e) {
+            header4.innerText = e.clientY;
+        }
+
+            
+
+        let header1 = document.querySelector("h2");
+        header1.addEventListener("mousemove", changeText1);
+
+        let header2 = document.querySelector("h3");
+        header2.addEventListener("mousemove", changeText2);
+
+        let header3 = document.querySelector("h4");
+        header3.addEventListener("mousemove", changeText3);
+
+        let header4 = document.querySelector("h5");
+        header4.addEventListener("mousemove", changeText4);
+
     </script>
 </body>
 </html>
